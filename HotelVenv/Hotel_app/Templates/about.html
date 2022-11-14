@@ -1,103 +1,420 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resort a Hotel Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Resort Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="{%static 'lib/web/css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{%static 'lib/web/css/flexslider.css'%}" type="text/css" media="screen" property="" />
 
-<!doctype html>
-<html lang="en">
-
-    <!-- Este es el nav bar es la parte superior que aparece en la página web-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="http://127.0.0.1:8000/hotel/index/">Hotel Real</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Opciones
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/hotel/about/">Acerca de nosotros</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
+<link rel="stylesheet" type="text/css" href="{%static 'lib/web/css/zoomslider.css'%}" />
+<link rel="stylesheet" type="text/css" href="{%static 'lib/web/css/style.css'%}" />
+<link href="{%static 'lib/web/css/font-awesome.css'%}" rel="stylesheet"> 
+<script type="text/javascript" src="{%static 'lib/web/js/modernizr-2.6.2.min.js'%}"></script>
+<!--/web-fonts-->
+<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+<!--//web-fonts-->
+</head>
+<body>
+<!--/main-header-->
+  <div class="w3layouts-top-strip">
+			<div class="top-srip-agileinfo">
+				<div class="w3ls-social-icons text-left">
+					<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+					<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+					<a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+					<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+					
+				</div>
+				<div class="agileits-contact-info text-right">
+					<ul>
+						<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +090 480 088</li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">mail@example.com</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+  <!--/banner-section-->
+	<div id="demo-1" class="banner-inner">
+		        <!--/HEADER-->
+				{%include 'header.html'%}
         
+				<!--/HEADER-->
+		</div>
+		 </div>
+  <!--/banner-section-->
+ <!--//main-header-->
+    <!-- breadcrumb -->
+	<div class="w3_breadcrumb">
+	<div class="breadcrumb-inner">	
+			<ul>
+				<li><a href="http://127.0.0.1:8000/hotel/index/">Home</a> <i> /</i></li>
+				<li>About</li>
+			</ul>
+		</div>
+	</div>
+<!-- //breadcrumb -->
+			<!--/content-inner-section-->
+				<div class="w3_content_agilleinfo_inner">
+					<div class="container">
+					      <div class="inner-agile-w3l-part-head">
+					            <h2 class="w3l-inner-h-title">About</h2>
+							</div>
+							<div class="ab-w3l-spa">
+							 <img src="{%static 'lib/web/images/ab.jpg'%}" alt="" class="img-responsive" />
+								<p>								
+								Nuestro Hotel se enorgullece tiene como objetivo principal brindar el mejor de los servicios y
+								atenciones para con nuestros clientes, tenemos muchos años de funcionamiento y estamos constantemente
+								trantando de adaptarnos al ritmo del avance de la nueva sociedad sin dejar de lado nuestra propia
+								identidad histórica.
+		
+								</p>
 
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/43/df/4a/20160201-173126-largejpg.jpg?w=1200&h=-1&s=1" class="img-fluid" alt="...">
+								<p>								
+									Estamos orgullosos de decir que somos un hotel de primer nivel, que cuenta con todas las instalaciones
+									necesarias para brindar una atencición de alta calidad a nuestros visitantes, y que poseemos la capacidad 
+									de antender diferentes tipos de eventos sociales, como reuniones, graduaciones, condecoraciones y demás
+									eventos sociales.
+								</p>
+
+							</div>
+								<!-- services -->
+
+	<!-- //welcome -->
+	</div>
+</div>
+	 <div class="team-section">
+	 		      <div class="container">
+				  <h3 class="tittle">Nuestro personal está compuesto principalmente por: </h3>
+		      <div class="team-row">
+				<div class="col-md-3 team-grids">
+					<div class="team-img">
+						<img class="img-responsive" src="{%static 'lib/web/images/recepcionista.jpg'%}" width="320" height="255" alt="">
+						<div class="captn">
+							<ul class="top-links">
+
+								<h4>Recepcionista</h4>
+								</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 team-grids">
+					<div class="team-img">
+						<img class="img-responsive" src="{%static 'lib/web/images/botones.jpg'%}" width="320" height="255" alt="">
+						<div class="captn">
+							<ul class="top-links">
+								<h4>Botones</h4>
+								</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-3 team-grids">
+					<div class="team-img">
+						<img class="img-responsive" src="{%static 'lib/web/images/gobernata.jpg'%}" width="320" height="255" alt="">
+						<div class="captn">
+							<ul class="top-links">
+								<h4>Gobernata</h4>
+								</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 team-grids">
+					<div class="team-img">
+						<img class="img-responsive" src="{%static 'lib/web/images/camarero.jpg'%}" width="320" height="255" alt="">
+						<div class="captn">
+							<ul class="top-links">
+									<h4>Camarero</h4>
+								</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+
+				<div class="team-row">
+					<div class="col-md-3 team-grids">
+						<div class="team-img">
+							<img class="img-responsive" src="{%static 'lib/web/images/barman.jpg'%}" width="320" height="255" alt="">
+							<div class="captn">
+								<ul class="top-links">
+	
+									<h4>Barman</h4>
+	
+									</ul>			
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 team-grids">
+						<div class="team-img">
+							<img class="img-responsive" src="{%static 'lib/web/images/chef.WEBP'%}" width="320" height="255" alt="">
+							<div class="captn">
+								<ul class="top-links">
+									<h4>Chef</h4>
+									</ul>					
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 team-grids">
+						<div class="team-img">
+							<img class="img-responsive" src="{%static 'lib/web/images/auxiliar.WEBP'%}" width="320" height="255" alt="">
+							<div class="captn">
+								<ul class="top-links">
+									<h4>Auxiliar de cocina</h4>
+									</ul>				
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 team-grids">
+						<div class="team-img" width="320" height="280" >
+							<img class="img-responsive" src="{%static 'lib/web/images/maitre.jpg'%}" width="320" height="280" alt="">
+							<div class="captn">
+								<ul class="top-links">
+										<h4>Maitre</h4>
+									</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+			</div> 
+		</div>	
+</div>	
 
 
-      </div>
+	<!-- /plans -->
+<!-- //breadcrumb -->
+			<!--/content-inner-section-->
+			<div class="w3_content_agilleinfo_inner">
+				<div class="container">
+					<div class="inner-agile-w3l-part-head">
+					   <h2 class="w3l-inner-h-title">Contact</h2>
+						
+					</div>
+							<div class="w3_mail_grids">
+								<form action="#" method="post">
+									<div class="col-md-6 w3_agile_mail_grid">
+											<input type="text" placeholder="Your Name"  required="">
+											<input type="email" placeholder="Your Email" required="">
+											<input type="text" placeholder="Your Phone Number" required="">
 
-    </div>
-  </div>
+										
+									</div>
+									<div class="col-md-6 w3_agile_mail_grid">
+										<textarea name="Message" placeholder="Your Message" required=""></textarea>
+										<input type="submit" value="Submit">
+									</div>
+									<div class="clearfix"> </div>
+								</form>
+					</div>
+			   </div>
+					<div class=" map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12947831.742778081!2d-95.665!3d37.599999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1422444552833"></iframe>
+					</div>
+		  </div>
+	<!--//content-inner-section-->
+	<div class="w3l_contact-bottom">
+<div class="container">
+	
+	<div class="w3ls_con_grids">
+		
+		<div class="w3ls_footer_grid">
+			<div class="col-md-4 con-ions-left">
+				<div class="con-ions-left-w3l">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+				</div>
+				<div class="con-grid-w3l-leftr">
+					<h4>Location</h4>
+					<p>3030 Mexico, NY,United States</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-4 con-ions-left">
+				<div class="con-ions-left-w3l">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</div>
+				<div class="con-grid-w3l-leftr">
+					<h4>Email</h4>
+					<a href="mailto:info@example.com">info@example.com</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-4 con-ions-left">
+				<div class="con-ions-left-w3l">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+				</div>
+				<div class="con-grid-w3l-leftr">
+					<h4>Call Us</h4>
+					<p>(+000) 003 003 0052</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+</div>
+	</div>
+	<!-- Modal1 -->
+						<div class="modal fade" id="myModal1" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>Reservation Form</h4>
+											<div class="book-form-inner">
 
-  <li><hr class="dropdown-divider"></li>
+											   <form action="#" method="post">
+													<div class="col-md-6 form-date-w3-agileits1">
+														<label><i class="fa fa-user" aria-hidden="true"></i> Name :</label>
+														<input type="text" name="name" placeholder="Your name" required="">
+													</div>
+													<div class="col-md-6 form-date-w3-agileits1 second-agile1">
+														<label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
+														<input type="email" name="email" placeholder="Your email" required="">
+													</div>
+													  <div class="col-md-6 form-date-w3-agileits">
+																<label><i class="fa fa-calendar" aria-hidden="true"></i> Arrival Date :</label>
+																<input  id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+															
+															</div>
+												<div class="col-md-6 form-time-w3layouts second-agile">
+														<label><i class="fa fa-clock-o" aria-hidden="true"></i> Time :</label>
+														<input type="time">
+												</div>
+												<div class="col-md-6 form-date-w3-agileits">
+															<label><i class="fa fa-calendar" aria-hidden="true"></i> Departure Date :</label>
+																<input  id="datepicker1" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+																
+															</div>
+													<div class="col-md-6 form-time-w3layouts1 second-agile1">
+															<label><i class="fa fa-clock-o" aria-hidden="true"></i> Time :</label>
+															<input type="time">
+													</div>
+													<div class="col-md-6 form-left-agileits-w3layouts1 bottom-w3ls1">
+															<label><i class="fa fa-home" aria-hidden="true"></i> Choose a Room :</label>
+															<select class="form-control">
+																<option></option>
+																<option>Standard Double Room</option>
+																<option>Standard Family Room</option>
+																<option>Garden Family Room</option>
+																<option>Deluxe Double Room</option>
+																<option>Executive Junior Suite</option>
+																<option>Maisonette</option>
+															</select>
+													</div>
+													<div class="col-md-6 form-left-agileits-w3layouts1 second-agile1">
+															<label><i class="fa fa-users" aria-hidden="true"></i> No.of People :</label>
+															<select class="form-control">
+																<option></option>
+																<option>1 Person</option>
+																<option>2 People</option>
+																<option>3 People</option>
+																<option>4 People</option>
+																<option>5 People</option>
+																<option>More</option>
+															</select>
+													</div>
+													<div class="clearfix"> </div>
+													<div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
+														  <input type="submit" value="Make a Reservation">
+													</div>
+											</form>
+								</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //Modal1 -->
+			
+			<!--//content-inner-section-->
+
+ 	<!-- FOOTER -->
+
+	 {%include 'footer.html'%}
+	 <!-- FOOTER -->
+
+	<!-- Dropdown-Menu-JavaScript -->
+			<script>
+				$(document).ready(function(){
+					$(".dropdown").hover(            
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+							$(this).toggleClass('open');        
+						},
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+							$(this).toggleClass('open');       
+						}
+					);
+				});
+			</script>
+		<!-- //Dropdown-Menu-JavaScript -->
 
 
-  <div class="innerPageTmplBox dmDefaultPage  dmRespRowsWrapper dmRespRowsWrapperSize1" id="1841797601"> <div class="dmRespRow fullBleedChanged fullBleedMode u_1245301488" id="1245301488"> <div class="dmRespColsWrapper" id="1635211739"> <div class="dmRespCol small-12 u_1486174198 hasBackgroundOverlay medium-12 large-12" id="1486174198"> <span id="1958003471"></span> 
-  
-    <div class="u_1131210331 dmRespRow" id="1131210331"> <div class="dmRespColsWrapper" id="1800337937"> <div class="dmRespCol large-12 medium-12 small-12" id="1687054859"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1022595542" style="transition: opacity 1s ease-in-out 0s;" data-diy-text=""> <h3 class="text-align-left"><span style="text-transform: uppercase; display: initial;">Aquí podrás encontrar más infromación sobre nuestro hotel</span></h3> 
-   </div> 
-    <div class="u_1775054364 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1775054364"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1247184700"></div> 
-    <div class="u_1439260702 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1439260702" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="text-align-left"><span class="" style="display: initial;"><span style="display: initial;">Hotel Real ha sido reconocido en varias ocasiones con diferentes acreditaciones que ratifican nuestro compromiso con los mejores estandares en atención al cliente</span> 
-   </span></p><p class="text-align-left"><span style="display: initial;"><br></span></p><p class="text-align-left"><span style="display: initial;">Hotel Real es uno de los más populares en sitios dedicados a la busqueda de hoteles para viajeros como son Hotels.com, Expedia, Booking.com and Tripadvisor - Siendo de los mejores votados por sus huespedes, Hay muchas razones por las cuales elegir a Hotel Real.<br></span></p></div> 
-    <div class="u_1205282430 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1205282430"><p class="size-20 m-size-16"><span style="display: unset; font-weight: bold;" class="font-size-20 m-font-size-16">Accesibilidad a Hotel Real</span></p></div> 
-    <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1473412116"><p><span class="" style="display: unset;"><span style="display: unset;">Hotel Real se construyó originalmente en 1923. Desde entonces, el hotel se ha conservado y no tiene habitaciones en el primer piso ni ascensores para ofrecer. Después de consultar a los expertos sobre las opciones, se ha determinado que no se puede lograr fácilmente y que no es técnicamente factible hacer que el hotel sea accesible para los clientes potenciales que requieren sillas de ruedas. Podemos acomodar a las personas con discapacidad auditiva y buscaremos satisfacer otras necesidades. Llame al 562-283-8755 para adaptaciones especiales o para obtener más información.</span> 
-   </span></p><p><span style="display: initial;"><br></span></p><p><span style="display: unset;">Una incomparable hostpitalidad te espera. Esperamos poder darte la bienvenida a nuestro hotel pronto</span></p></div> 
-    <div class="u_1656460751 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1656460751" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-16 size-20"><span class="m-font-size-16 font-size-20" style="font-weight: bold; display: unset;">Award-Winning Hospitality</span></p></div> 
-    <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1551220159"><p><span style="display: initial;">Conveniente para los huéspedes que viajan por negocios, nuestro hotel de Long Beach, CA, se encuentra a tres minutos en automóvil del centro de convenciones de Long Beach. No hay nada que valoremos más que la satisfacción de los huéspedes, por lo que nos enorgullece tener una calificación de estrellas de 4,6 sobre 5, promediada a partir de cientos de reseñas. Ven y quédate en la joya escondida de Long Beach, a solo tres cuadras de la playa.<br></span></p></div> 
-   </div> 
-   </div> 
-   </div> 
-   </div>
+<script type="text/javascript" src="{%static 'lib/web/js/jquery.zoomslider.min.js'%}"></script>
+		<!-- search-jQuery -->
+				<script src="{%static 'lib/web/js/main.js'%}"></script>
 
+<!--/script-->
+			<!-- flexSlider -->
+					<script defer src="{%static 'lib/web/js/jquery.flexslider.js'%}"></script>
+					<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				  </script>
+	<!-- Calendar -->
+				<link rel="stylesheet" href="{%static 'lib/web/css/jquery-ui.css'%}" />
+				<script src="{%static 'lib/web/js/jquery-ui.js'%}"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+			<script type="text/javascript" src="{%static 'lib/web/js/move-top.js'%}"></script>
+			<script type="text/javascript" src="{%static 'lib/web/js/easing.js'%}"></script>
 
-
-   
-
-
-
- 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-
-
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/elegant-royal-hotel-logo-design-template-baa93e95a4caef947345ca72f87a2400_screen.jpg?ts=1611220642" class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Contactenos</h5>
-
-          <a href="#" class="btn btn-primary">Facebook</a>
-          <a href="#" class="btn btn-primary">Instragram</a>
-          <a href="#" class="btn btn-primary">Twitter</a>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <body>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
-
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+ <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+<!--end-smooth-scrolling-->
+<!--js for bootstrap working-->
+	<script src="{%static 'lib/web/js/bootstrap.js'%}"></script>
+<!-- //for bootstrap working -->
 </body>
 </html>
