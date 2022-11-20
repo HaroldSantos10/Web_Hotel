@@ -1,0 +1,236 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Luxury Hotel</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Resort Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="{%static 'lib/web/css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{%static 'lib/web/css/flexslider.css'%}" type="text/css" media="screen" property="" />
+<link rel="stylesheet" type="text/css" href="{%static 'lib/web/css/zoomslider.css'%}" />
+<link rel="stylesheet" type="text/css" href="{%static 'lib/web/css/style.css'%}" />
+<link href="{%static 'lib/web/css/font-awesome.css'%}" rel="stylesheet"> 
+<script type="text/javascript" src="{%static 'lib/web/js/modernizr-2.6.2.min.js'%}"></script>
+<!--/web-fonts-->
+<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+<!--//web-fonts-->
+</head>
+<body>
+<!--/main-header-->
+  <div class="w3layouts-top-strip">
+			<div class="top-srip-agileinfo">
+				<div class="w3ls-social-icons text-left">
+					<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+					<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+					<a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+					<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+					
+				</div>
+				<div class="agileits-contact-info text-right">
+					<ul>
+						<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +503 2346 2000</li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:luxuryHotel@lux.com">luxuryHotel@lux.com</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+  <!--/banner-section-->
+	<div id="demo-1" class="banner-inner">
+		
+        <!--/HEADER-->
+        {%include 'header.html'%}
+        
+        <!--/HEADER-->
+
+
+		</div>
+		 </div>
+  <!--/banner-section-->
+ <!--//main-header-->
+	        
+						<!-- breadcrumb -->
+	<div class="w3_breadcrumb">
+	<div class="breadcrumb-inner">	
+			<ul>
+				<li><a href="http://127.0.0.1:8000/hotel/index/">Home</a> <i>/</i></li>
+				
+				<li>Contact</li>
+			</ul>
+		</div>
+	</div>
+<!-- //breadcrumb -->
+			<!--/content-inner-section-->
+			
+				  <div class="w3_content_agilleinfo_inner">
+					    <div class="container">
+							<div class="inner-agile-w3l-part-head">
+					           <h2 class="w3l-inner-h-title">Suscribete para recibir notificaciones a tu correo</h2>
+								
+							</div>
+									<div class="w3_mail_grids">
+										<form action="/hotel/addsuscriptor/" method="post"> {% csrf_token %}
+											<div class="col-md-6 w3_agile_mail_grid">
+													<input type="text" name="inputnombre" id="inputnombre" placeholder="Tu Nombre"  required="">
+													<input type="text" name="inputapellido" id="inputapellido" placeholder="Tu Apellido" required="">
+													<input type="email" name="inputemail" id="inputemail" placeholder="Tu Email" required="">
+
+
+												
+											</div>
+											<div class="col-md-6 w3_agile_mail_grid">
+												<input type="submit" value="Suscribirse">
+											</div>
+											<div class="clearfix"> </div>
+										</form>
+							</div>
+					   </div>
+							
+                            
+				  </div>
+
+
+			<!--//content-inner-section-->
+
+<!--//Sección de la tabla de suscripciones-->
+			<div class="container text-center">
+				<div class="col-6">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">Nombre</th>
+								<th scope="col">Apellido</th>
+								<th scope="col">Email</th>
+
+							</tr> 
+						</thead>
+						<tbody>
+							{%for sus in suscriptor%}
+							<tr>
+								<td>{{sus.nombre}}</td>
+								<td>{{sus.apellido}}</td>
+								<td>{{sus.email}}</td>
+
+								<td><a href="/editcliente/{{cli.id}}" class="btn btn-warning">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill"
+										viewBox="0 0 16 16">
+										<path
+											d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+									</svg>
+								</a>
+								</td>
+								<td><a href= "/delcliente/{{cli.id}}" class="btn btn-danger">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill"
+										viewBox="0 0 16 16">
+										<path
+											d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+									</svg>
+								</a>
+								</td>
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+				</div>
+	
+	
+			</div>
+	
+<!--//Sección de la tabla de suscripciones-->
+
+
+
+
+
+
+		</div>
+	</div>
+ <!-- Footer -->
+	
+	<!-- FOOTER -->
+
+	{%include 'footer.html'%}
+	<!-- FOOTER -->
+
+
+	<!-- Dropdown-Menu-JavaScript -->
+			<script>
+				$(document).ready(function(){
+					$(".dropdown").hover(            
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+							$(this).toggleClass('open');        
+						},
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+							$(this).toggleClass('open');       
+						}
+					);
+				});
+			</script>
+		<!-- //Dropdown-Menu-JavaScript -->
+
+
+<script type="text/javascript" src="{%static 'lib/web/js/jquery.zoomslider.min.js'%}"></script>
+		<!-- search-jQuery -->
+				<script src="{%static 'lib/web/js/main.js'%}"></script>
+
+<!--/script-->
+	<script src="{%static 'lib/web/js/simplePlayer.js'%}"></script>
+			<script>
+				$("document").ready(function() {
+					$("#video").simplePlayer();
+				});
+			</script>
+			<!-- flexSlider -->
+					<script defer src="{%static 'lib/web/js/jquery.flexslider.js'%}"></script>
+					<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				  </script>
+
+<script type="text/javascript" src="{%static 'lib/web/js/move-top.js'%}"></script>
+<script type="text/javascript" src="{%static 'lib/web/js/easing.js'%}"></script>
+
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+ <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+<!--end-smooth-scrolling-->
+<!--js for bootstrap working-->
+	<script src="{%static 'lib/web/js/bootstrap.js'%}"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>
