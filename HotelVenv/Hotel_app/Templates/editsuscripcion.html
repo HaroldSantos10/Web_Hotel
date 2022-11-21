@@ -62,125 +62,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul>
 				<li><a href="http://127.0.0.1:8000/hotel/index/">Home</a> <i>/</i></li>
 				
-				<li>Tabla de Clientes </li>
+				<li>Contact</li>
 			</ul>
 		</div>
 	</div>
 <!-- //breadcrumb -->
-		
-
-
-
-<!--/content-inner-section-->
-		
-<div class="w3_content_agilleinfo_inner">
-		<div class="container">
-
-			<h2 class="w3l-inner-h-title">Espacio para agregar clientes</h2>
-					
-				<form class="row g-3" action="/hotel/addcliente/" method="post"> {% csrf_token %}
-					<div class="col-md-6">
-					  <label for="inputEmail4" class="form-label">Nombre</label>
-					  <input type="text" class="form-control" id="inputnombre" name = "inputnombre">
-					</div>
-					<div class="col-md-6">
-					  <label for="inputPassword4" class="form-label">Apellido</label>
-					  <input type="text" class="form-control" id="inputapellido" name = "inputapellido">
-					</div>
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">Identificacion</label>
-						<input type="text" class="form-control" id="inputid" name = "inputid">
-					  </div>
-					  <div class="col-md-6">
-						<label for="inputPassword4" class="form-label">Telefono</label>
-						<input type="text" class="form-control" id="inputtelefono" name = "inputtelefono">
-					  </div>
-
-					<div class="col-md-6">
-					  <label for="inputZip" class="form-label">Edad</label>
-					  <input type="number" min="18" class="form-control" id="inputedad" name = "inputedad">
-					</div>
-
-					<div class="col-md-6">
-					  <label for="inputState" class="form-label">Habitación</label>
-					  <select id="inputhabitacion" name = "inputhabitacion" class="form-select" >
-						<option  selected>Elige una habitación...</option>
-						<option value=1>Deluxe Double Room</option>
-                        <option value=2>Deluxe Single Room</option>
-                        <option value=3>Habitación Doble</option>
-                        <option value=4>Habitación Individual</option>
-                        <option value=5>Habitación triple</option>
-                        <option value=6>Habitación Familiar</option>
-					  </select>
-					</div>
-
-
-					<div class="col-12">
-					  <button type="submit"  class="btn btn-primary">Enviar</button>
-					</div>
-				  </form>
-
-		</div>
-	</div>
-	
-
-		<div class="container">
-
+			<!--/content-inner-section-->
 			
-				
-
-			<div class="col-6">
-				<table class="table">
-					<thead class="thead-dark">
-						<tr>
-							<th scope="col">Habitación</th>
-							<th scope="col">Nombre</th>
-							<th scope="col">Apellido</th>
-							<th scope="col">Edad</th>
-							<th scope="col">Identificacion</th>
-							<th scope="col">Telefono</th>
-						</tr> 
-					</thead>
-					<tbody>
-						{%for cli in cliente%}
-						<tr>
-							<td>{{cli.habitacion_id}}</td>
-							<td>{{cli.nombre}}</td>
-							<td>{{cli.apellido}}</td>
-							<td>{{cli.edad}}</td>
-							<td>{{cli.identificacion}}</td>
-							<td>{{cli.telefono}}</td>
-							<td><a href="/editcliente/{{cli.id}}" class="btn btn-warning">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill"
-									viewBox="0 0 16 16">
-									<path
-										d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
-								</svg>
-							</a>
-							</td>
-							<td><a href= "/delcliente/{{cli.id}}" class="btn btn-danger">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill"
-									viewBox="0 0 16 16">
-									<path
-										d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-								</svg>
-							</a>
-							</td>
-						</tr>
-						{%endfor%}
-					</tbody>
-				</table>
-			</div>
+				  <div class="w3_content_agilleinfo_inner">
+					    <div class="container">
+							<div class="inner-agile-w3l-part-head">
+					           <h2 class="w3l-inner-h-title">Suscribete para recibir notificaciones a tu correo</h2>
+								
+							</div>
+									<div class="w3_mail_grids">
+										<form action="/hotel/guardarsuscriptor/{{suscripcion.id}}" method="post"> {% csrf_token %}
+											<div class="col-md-6 w3_agile_mail_grid">
+													<input type="text" name="inputnombre" id="inputnombre" value="{{suscripcion.nombre}}" placeholder="Tu Nombre"  required="">
+													<input type="text" name="inputapellido" id="inputapellido" value="{{suscripcion.apellido}}" placeholder="Tu Apellido" required="">
+													<input type="email" name="inputemail" id="inputemail" value="{{suscripcion.email}}" placeholder="Tu Email" required="">
 
 
-		</div>
-
+												
+											</div>
+											<div class="col-md-6 w3_agile_mail_grid">
+												<input type="submit" value="Actualizar">
+                                                <a href="/hotel/suscripcion/" class="btn btn-danger">Regresar</a>
+											</div>
+											<div class="clearfix"> </div>
+										</form>
+							</div>
+					   </div>
+      
+				  </div>
 
 
 			<!--//content-inner-section-->
 
-		</div>
-	</div>
+<!--//Sección de la tabla de suscripciones-->
+			
+<!--//Sección de la tabla de suscripciones-->
+
+
+
  <!-- Footer -->
 	
 	<!-- FOOTER -->
@@ -259,13 +183,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</script>
 <!--end-smooth-scrolling-->
 <!--js for bootstrap working-->
-   
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-
-
-
-    <!--script src="{%static 'lib/web/js/bootstrap.js'%}"></script-->
+	<script src="{%static 'lib/web/js/bootstrap.js'%}"></script>
 <!-- //for bootstrap working -->
 </body>
 </html>

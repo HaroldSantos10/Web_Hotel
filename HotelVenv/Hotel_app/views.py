@@ -79,3 +79,31 @@ def addsuscriptor(request):
         nombre = nombre, apellido = apellido, email = email
     ) 
     return redirect('/hotel/suscripcion')
+
+#editar una suscripcion
+
+def editsuscriptor(request,id):
+    suscripcion=tblsuscripciones.objects.get(id=id)
+    return render(request,'editsuscripcion.html', {"suscripcion":suscripcion})
+
+def guardarsuscriptor(request,id): 
+     nombre=request.POST['inputnombre']
+     apellido=request.POST['inputapellido']
+     email=request.POST['inputemail']
+
+     id=tblsuscripciones.objects.get(id=id)
+     id.nombre=nombre
+     id.apellido=apellido
+     id.email=email
+     id.save()
+     return redirect('/hotel/suscripcion')     
+
+
+
+
+#eliminar una suscripcion
+def delsuscripcion(request, id):
+    suscripcion = tblsuscripciones.objects.get(id=id)
+    suscripcion.delete()
+    return redirect('/hotel/suscripcion')
+
