@@ -107,3 +107,17 @@ def delsuscripcion(request, id):
     suscripcion.delete()
     return redirect('/hotel/suscripcion')
 
+
+##Registrar
+#Login de usuarios dentro de la web
+def register(request):
+    form = UserCreationForm
+
+    if request.method == "post":
+        form = UserCreationForm(request.post)
+        if form.is_valid():
+            form.save()
+
+
+    context = {"form":form}
+    return render(request, '/hotel/register.html', context)
