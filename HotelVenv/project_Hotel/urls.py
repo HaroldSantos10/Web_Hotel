@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from Hotel_app.views import vistalogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #para llegar a este urls hay que agregara el /hotel/*** de lo contrario da error
     path('hotel/', include('Hotel_app.urls')),
+    path('', vistalogin )
 ]

@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			{%include 'banner.html'%}
 		</div>
   <!--/banner-section-->
-	<div id="demo-1" class="banner-inner">
+	<div id="demo-1" class="banner-inner"> 
 		
         <!--/HEADER-->
         {%include 'header.html'%}
@@ -48,49 +48,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul>
 				<li><a href="http://127.0.0.1:8000/hotel/index/">Home</a> <i>/</i></li>
 				
-				<li>Contact</li>
+				<li>{{request.user}}</li>
 			</ul>
 		</div>
 	</div>
 <!-- //breadcrumb -->
-			<!--/content-inner-section--> 
-			
+			<!--/content-inner-section-->
 				  <div class="w3_content_agilleinfo_inner">
 					    <div class="container">
 							<div class="inner-agile-w3l-part-head">
-					           <h2 class="w3l-inner-h-title">Suscribete para recibir notificaciones a tu correo</h2>
-								
-							</div>
-									<div class="w3_mail_grids">
-										<form action="/hotel/guardarsuscriptor/{{suscripcion.id}}" method="post"> {% csrf_token %}
-											<div class="col-md-6 w3_agile_mail_grid">
-													<input type="text" name="inputnombre" id="inputnombre" value="{{suscripcion.nombre}}" placeholder="Tu Nombre"  required="">
-													<input type="text" name="inputapellido" id="inputapellido" value="{{suscripcion.apellido}}" placeholder="Tu Apellido" required="">
-													<input type="email" name="inputemail" id="inputemail" value="{{suscripcion.email}}" placeholder="Tu Email" required="">
+					           <h2 class="w3l-inner-h-title">Perfil</h2>
+							   <div class="w3_agileits_testimonial_grid">
+								<i class="fa fa-quote-right" aria-hidden="true"></i>
+									
+									<img src="{%static 'lib/web/images/perfil.WEBP'%}" width="200" height="200" alt=" " class="img-responsive" />
+									
+
+									<h3 class="fst-normal">Usuario: {{request.user}}</h3>
 
 
-												
-											</div>
-											<div class="col-md-6 w3_agile_mail_grid">
-												<input type="submit" value="Actualizar">
-                                                <a href="/hotel/suscripcion/" class="btn btn-danger">Regresar</a>
-											</div>
-											<div class="clearfix"> </div>
-										</form>
+								</div>
 							</div>
+
 					   </div>
-      
+
 				  </div>
-
-
 			<!--//content-inner-section-->
-
-<!--//Sección de la tabla de suscripciones-->
-			
-<!--//Sección de la tabla de suscripciones-->
-
-
-
+		
+	</div>
  <!-- Footer -->
 	
 	<!-- FOOTER -->

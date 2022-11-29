@@ -2,24 +2,34 @@ from django.shortcuts import render, redirect
 from django.template import context
 from django.http import HttpResponse
 from .models import *
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
+
 
 # Create your views here.
 
-def index(request):
-    return render(request, 'index.html')
 
+
+def index(request):
+    return render(request,'index.html')
+
+def error(request):
+    return render(request, 'error_404.html')
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request,'about.html') 
 
 
 def gallery(request):
     return render(request, 'gallery.html')
 
-
-def contact(request):
-    return render(request, 'contact.html')
+@login_required(login_url='')
+def perfil(request):
+    return render(request, 'perfil.html')
 
 #en esta view se contiene el formulario para hacer las reservaciones
 
@@ -35,6 +45,34 @@ def mostrarclientes(request):
 
 def suscriptorescrud(request):
     return render(request, 'suscriptorescrud.html')
+
+
+##mostraar view del login
+## E ingresar con el login
+def vistalogin(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username = username, password = password)
+
+        if user is not None:
+            login(request, user)
+
+            return redirect('/hotel/index/')
+    
+        else:
+
+            messages.success(request, 'Datos incorrectos')
+
+    return render(request, 'login.html')
+
+
+#Cerrar sesión
+def cerrarsesion(request):
+    logout(request)
+    return redirect('/hotel/') 
+
 
 
 
@@ -63,6 +101,34 @@ def addcliente(request):
     return redirect('/hotel/mostrarclientes')
 
 
+###AGREGAR UNA RESERVACIÓN 
+def addreservacion(request):
+
+
+    nombre = request.POST['inputnombre']
+    apellido = request.POST['inputapellido']
+
+    fecha_llegada = request.POST['inputfechaLl']
+    fecha_salida = request.POST['inputfechaS']
+    email = request.POST['inputemail']
+
+    habitacion = request.POST['inputhabitacion']
+
+    reservacion = tblreservacion.objects.create(
+        nombre = nombre, apellido = apellido, fecha_llegada = fecha_llegada, fecha_salida = fecha_salida,
+        email = email, habitacion = habitacion
+
+    )
+    messages.success(request, 'Reservación realizada con éxito')
+    
+
+    return redirect('/hotel/products')
+
+
+#MOSTRAR RESERVACIONES
+
+
+
 
 #mostrar suscripciones a la pagina
 def adminsuscripciones(request):
@@ -79,6 +145,12 @@ def addsuscriptor(request):
         nombre = nombre, apellido = apellido, email = email
     ) 
     return redirect('/hotel/suscripcion')
+
+
+
+
+
+
 
 #editar una suscripcion
 
@@ -109,15 +181,25 @@ def delsuscripcion(request, id):
 
 
 ##Registrar
-#Login de usuarios dentro de la web
-def register(request):
-    form = UserCreationForm
 
-    if request.method == "post":
-        form = UserCreationForm(request.post)
+#### CLASE PARA INSTANCIAR A LOS CAMPOS DEL USERCRATIONFORM
+
+class Registro(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username','password1','password2','email','first_name','last_name']
+
+
+#Login de usuarios dentro de la web
+
+
+def register(request):
+    form = Registro()
+
+    if request.method == 'POST':
+        form = Registro(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Usuario creado con éxito')
 
-
-    context = {"form":form}
-    return render(request, '/hotel/register.html', context)
+    return render(request, 'register.html', {"form":form})

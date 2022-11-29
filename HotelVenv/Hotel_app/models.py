@@ -87,7 +87,7 @@ class tblprecio_habitacion(models.Model):
 
 class tblreservacion(models.Model):#######RESERVACION
 
-    hotel_id =  models.ForeignKey(tblhotel, on_delete = models.CASCADE)
+    #hotel_id =  models.ForeignKey(tblhotel, on_delete = models.CASCADE)
     #habitacion_id =  models.ForeignKey(tblhabitacion, on_delete = models.CASCADE)
     #precio_hab_id = models.ForeignKey(tblprecio_habitacion, on_delete = models.CASCADE)
     nombre = models.CharField(max_length=200)
@@ -96,13 +96,13 @@ class tblreservacion(models.Model):#######RESERVACION
     fecha_llegada = models.DateField()
     fecha_salida = models.DateField()
     email = models.EmailField(max_length=254, null= False)
-    fecha_registro = models.DateField()
+    fecha_registro = models.DateField(auto_now_add=True)
     habitacion = models.CharField(max_length=200, null= True)
 
 
     
     def __str__(self, ):
-        return str(f'{self.nombre} {self.apellido}, fecha registro:{self.fecha_registro}')
+        return str(f'{self.nombre} {self.apellido}, fecha registro: {self.fecha_registro}')
 
 
 class tblcliente(models.Model):#######CLIENTE
@@ -116,6 +116,7 @@ class tblcliente(models.Model):#######CLIENTE
 
     def __str__(self):
         return str(f'{self.nombre}  {self.apellido}')
+
 
 
 

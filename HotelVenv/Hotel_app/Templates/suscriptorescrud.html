@@ -3,6 +3,7 @@
 <html>
 <head>
 <title>Luxury Hotel</title>
+<link rel="short icon" href="{%static 'lib/web/images/logo.png'%}">
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,22 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--/main-header-->
   <div class="w3layouts-top-strip">
-			<div class="top-srip-agileinfo">
-				<div class="w3ls-social-icons text-left">
-					<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-					<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-					<a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
-					<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-					
-				</div>
-				<div class="agileits-contact-info text-right">
-					<ul>
-						<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +503 2346 2000</li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:luxuryHotel@lux.com">luxuryHotel@lux.com</a></li>
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
+			{%include 'banner.html'%}
 		</div>
   <!--/banner-section-->
 	<div id="demo-1" class="banner-inner">
@@ -67,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //breadcrumb -->
-			<!--/content-inner-section-->
+			<!--/content-inner-section--> 
 			
 				  <div class="w3_content_agilleinfo_inner">
 					    <div class="container">
@@ -83,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<input type="email" name="inputemail" id="inputemail" placeholder="Tu Email" required="">
 
 
-												
+												 
 											</div>
 											<div class="col-md-6 w3_agile_mail_grid">
 												<input type="submit" value="Suscribirse">
