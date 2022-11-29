@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from Hotel_app.views import vistalogin
+#
+from django.conf.urls import handler404, handler500
+#
+from Hotel_app.views import Error404View, Error505View
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,3 +27,7 @@ urlpatterns = [
     path('hotel/', include('Hotel_app.urls')),
     path('', vistalogin )
 ]
+
+handler404 = Error404View.as_view()
+
+handler500 = Error505View.as_error_view()

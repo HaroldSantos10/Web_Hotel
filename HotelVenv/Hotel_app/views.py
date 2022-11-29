@@ -7,7 +7,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-
+from django.views.generic import (
+    View,
+    TemplateView,
+    ListView,
+    DetailView
+) 
 
 
 # Create your views here.
@@ -203,3 +208,23 @@ def register(request):
             messages.success(request, 'Usuario creado con éxito')
 
     return render(request, 'register.html', {"form":form})
+
+
+
+##### CONTROL DE ERRORES 
+
+class Error404View(TemplateView):
+    template_name = "error_404.html"
+
+class Error505View(TemplateView):
+    template_name = "error_500.html"
+
+    @classmethod
+    def as_error_view(cls):
+
+        v = cls.as_view()
+        def view(request):
+            r = v(request)
+            r.render()
+            return r
+        return view

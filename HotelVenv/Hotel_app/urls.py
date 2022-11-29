@@ -4,6 +4,7 @@ from .views import *
 
 
 
+
 urlpatterns = [ 
     path('index/', index),
     path('error/', error),
@@ -23,6 +24,5 @@ urlpatterns = [
     path('addcliente/', addcliente),
     path('addreservacion/', addreservacion),
     
-
- 
 ]
+
