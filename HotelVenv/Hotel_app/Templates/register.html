@@ -61,59 +61,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					           <h2 class="w3l-inner-h-title">Registrate en nuestra web</h2>
 								
 							</div>
-									<div class="w3_mail_grids">
+									<div class="login-form">
 										<form method="POST" action="/hotel/register/"> {% csrf_token %}
 
-											<div class="row">
+											<div class="col-md-6 form-date-w3-agileits">
 												<div class="col-4">
-												   <label for="exampleInputEmail1">Nombre de Usuario</label>
+													<label><i class="fa fa-user" aria-hidden="true"></i> Usuario:</label>
 												</div>
 												<div class="col-8"> 
 												   {{form.username}}
 												</div>
 											 </div>
-											 <div class="row">
+											 <div class="col-md-6 form-date-w3-agileits">
 												<div class="col-4">
-												   <label for="exampleInputEmail1">Primer Nombre:</label>
+													<label><i class="fa fa-user" aria-hidden="true"></i>Primer Nombre:</label>
 												</div>
 												<div class="col-8">
 												   {{form.first_name}}
 												</div>
 											 </div>
-											 <div class="row">
+											 <div class="col-md-6 form-date-w3-agileits">
 												<div class="col-4">
-												   <label for="exampleInputEmail1">Apellido</label>
+													<label><i class="fa fa-user" aria-hidden="true"></i> Apellido :</label>
 												</div>
 												<div class="col-8">
 												   {{form.last_name}}
 												</div>
 											 </div>
-											 <div class="row">
+											 <div class="col-md-6 form-date-w3-agileits">
 												<div class="col-4">
-												   <label for="exampleInputEmail1">Correo</label>
+													<label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
 												</div>
 												<div class="col-8">
 												   {{form.email}}
 												</div>
 											 </div>
-											 <div class="row">
+											 <div class="col-md-6 form-date-w3-agileits">
 												<div class="col-4">
-												   <label for="exampleInputPassword1">Contraseña:</label>
+													<label><i class="fa fa-asterisk" aria-hidden="true"></i> Contraseña :</label>
 												</div>
 												<div class="col-8">
 												   {{form.password1}}
 												</div>
 											 </div>
-											 <div class="row">
+											 <div class="col-md-6 form-date-w3-agileits">
 												<div class="col-4">
-												   <label for="exampleInputPassword1">Confirme la contraseña:</label>
+													<label><i class="fa fa-asterisk" aria-hidden="true"></i> Confirme la contraseña :</label>
 												</div>
 												<div class="col-8">
 												   {{form.password2}}
 												</div>
 											 </div>
 											 
-											 <div class="row">
+											 <div class="col-md-6 form-date-w3-agileits">
 												<div class="col">
 													
 												   <button class="btn btn-success">Registrar Usuario</button>

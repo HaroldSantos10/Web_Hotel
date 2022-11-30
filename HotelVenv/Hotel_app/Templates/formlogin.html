@@ -1,0 +1,27 @@
+
+{%load static%}
+
+   <div class="login-form">
+
+      <form action="/hotel/" method="post">  {% csrf_token %}
+           <div class="col-md-6 form-date-w3-agileits">
+               <label><i class="fa fa-user" aria-hidden="true"></i> Usuario :</label>
+               <input type="text" name="username" id="username" placeholder="Tu Username" required="">
+           </div>
+           <div class="col-md-6 form-date-w3-agileits">
+             <label><i class="fa fa-asterisk" aria-hidden="true"></i> Contraseña :</label>
+             <input  type="password" name="password" id="password" placeholder="Tu Contraseña" required="">
+         </div>
+
+           <div class="clearfix"> </div>
+           <div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
+                 <input type="submit" value="Ingresar">
+                 <br></br>
+                 <a href="/hotel/register/" class="btn btn-info">¿Aún no tienes cuenta? Regístrate</a>
+
+                 
+           </div>
+   </form>
+
+
+   </div>

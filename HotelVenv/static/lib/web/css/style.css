@@ -1491,7 +1491,7 @@ a.pa_italic:focus {
     margin-right: 10px;
         color: #2baf2b;
 }
-.book-form input[type="text"],.book-form input[type="date"],.book-form input[type="time"],.book-form input[type="email"] {
+.book-form input[type="text"],.book-form input[type="password"],.book-form input[type="date"],.book-form input[type="time"],.book-form input[type="email"] {
       width: 100%;
     color: #9a9797;
     outline: none;
@@ -1506,6 +1506,9 @@ a.pa_italic:focus {
 }
 .book-form input[type="text"]{
 	 border: 2px solid #fff;
+}
+.book-form input[type="password"]{
+	border: 2px solid #fff;
 }
 .book-form form input[type="submit"]{
     text-transform: capitalize;
@@ -1877,7 +1880,7 @@ h6.bed.three{
 h6.bed.four{
 	color:#ff401b;
 }
-.book-form-inner form input[type="text"],.book-form-inner form input[type="date"],.book-form-inner form input[type="time"],.book-form-inner form input[type="email"] {
+.book-form-inner form input[type="text"],.book-form-inner form input[type="password"],.book-form-inner form input[type="date"],.book-form-inner form input[type="time"],.book-form-inner form input[type="email"] {
     width: 100%;
     color: #9a9797;
     outline: none;

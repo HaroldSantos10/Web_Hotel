@@ -1,0 +1,47 @@
+
+{%load static%}
+
+   <h3 class="tittle why">Registrate</h3>
+   <div class="book-form">
+
+      <form action="/hotel/register/" method="post">  {% csrf_token %}
+           <div class="col-md-6 form-date-w3-agileits">
+               <label><i class="fa fa-user" aria-hidden="true"></i> Usuario:</label>
+               <input type="text" name="inputnombre" id="inputnombre" placeholder="Tu nombre de usuario" required="">
+           </div>
+           <div class="col-md-6 form-date-w3-agileits">
+            <label><i class="fa fa-user" aria-hidden="true"></i>Primer Nombre:</label>
+            <input type="text" name="inputnombre" id="inputnombre" placeholder="Tu primer nombre" required="">
+        </div>
+           <div class="col-md-6 form-date-w3-agileits">
+             <label><i class="fa fa-user" aria-hidden="true"></i> Apellido :</label>
+             <input  type="text" name="inputapellido" id="inputapellido" placeholder="Tu Apellido" required="">
+         </div>
+            <div class="col-md-6 form-date-w3-agileits">
+                           <label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de llegada :</label>
+                           <input  id="inputfechaLl" name="inputfechaLl" type="date" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                       
+                       </div>
+
+           <div class="col-md-6 form-date-w3-agileits">
+                       <label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de salida :</label>
+                           <input  id="inputfechaS" name="inputfechaS" type="date" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                           
+                       </div>
+
+
+           <div class="col-md-6 form-date-w3-agileits second-agile">
+             <label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
+             <input type="email" name="inputemail" id="inputemail" placeholder="Tu email" required="">
+         </div>
+           <div class="clearfix"> </div>
+           <div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
+                 <input type="submit" value="Hacer una reservación">
+
+                 
+           </div>
+   </form>
+
+
+   </div>
+
