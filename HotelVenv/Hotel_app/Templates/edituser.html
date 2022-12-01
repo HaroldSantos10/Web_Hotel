@@ -26,10 +26,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--/main-header-->
   <div class="w3layouts-top-strip">
-			{%include 'banner.html'%}
+		{%include 'banner.html'%}
 		</div>
   <!--/banner-section-->
-	<div id="demo-1" class="banner-inner"> 
+	<div id="demo-1" class="banner-inner">
 		
         <!--/HEADER-->
         {%include 'header.html'%}
@@ -48,59 +48,116 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul>
 				<li><a href="http://127.0.0.1:8000/hotel/index/">Home</a> <i>/</i></li>
 				
-				<li>{{request.user}}</li>
+				<li>Registrate</li>
 			</ul>
 		</div>
 	</div>
 <!-- //breadcrumb -->
 			<!--/content-inner-section-->
+			
 				  <div class="w3_content_agilleinfo_inner">
 					    <div class="container">
 							<div class="inner-agile-w3l-part-head">
-					           <h2 class="w3l-inner-h-title">Perfil</h2>
-							   <div class="w3_agileits_testimonial_grid">
-								<i class="fa fa-quote-right" aria-hidden="true"></i>
-									
-									<img src="{%static 'lib/web/images/perfil.WEBP'%}" width="200" height="200" alt=" " class="img-responsive" />
-									
-
-									<h3 class="fst-normal">Usuario: {{request.user}}</h3>
-
-									
-								</div>
-
+					           <h2 class="w3l-inner-h-title">Registrate en nuestra web</h2>
 								
-								<div class="inner-agile-w3l-part-head">
-									
-									{% if user.is_superuser %}
-										{%include 'formBotones.html'%}
-
-									{% endif %}
-						
-
-
-
-
-									
-								
-								</div>
-
-
 							</div>
+									<div class="login-form">
+										<form method="POST" action="/hotel/register/"> {% csrf_token %}
 
+											<div class="col-md-6 form-date-w3-agileits">
+												<div class="col-4">
+													<label><i class="fa fa-user" aria-hidden="true"></i> Usuario:</label>
+												</div>
+												<div class="col-8"> 
+												   {{form.username}}
+												</div>
+											 </div>
+											 <div class="col-md-6 form-date-w3-agileits">
+												<div class="col-4">
+													<label><i class="fa fa-user" aria-hidden="true"></i>Primer Nombre:</label>
+												</div>
+												<div class="col-8">
+												   {{form.first_name}}
+												</div>
+											 </div>
+											 <div class="col-md-6 form-date-w3-agileits">
+												<div class="col-4">
+													<label><i class="fa fa-user" aria-hidden="true"></i> Apellido :</label>
+												</div>
+												<div class="col-8">
+												   {{form.last_name}}
+												</div>
+											 </div>
+											 <div class="col-md-6 form-date-w3-agileits">
+												<div class="col-4">
+													<label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
+												</div>
+												<div class="col-8">
+												   {{form.email}}
+												</div>
+											 </div>
+											 <div class="col-md-6 form-date-w3-agileits">
+												<div class="col-4">
+													<label><i class="fa fa-asterisk" aria-hidden="true"></i> Contraseña :</label>
+												</div>
+												<div class="col-8">
+												   {{form.password1}}
+												</div>
+											 </div>
+											 <div class="col-md-6 form-date-w3-agileits">
+												<div class="col-4">
+													<label><i class="fa fa-asterisk" aria-hidden="true"></i> Confirme la contraseña :</label>
+												</div>
+												<div class="col-8">
+												   {{form.password2}}
+												</div>
+											 </div>
+											 
+											 <div class="col-md-6 form-date-w3-agileits">
+												<div class="col">
+													
+												   <button class="btn btn-success">Registrar Usuario</button>
+												</div>
+												<div class="col">
+												   <a href="/hotel/" class="btn btn-info">¿Ya tienes Usuario? Ingresa Aquí</a>
+							  
+												   {% if messages %}
+												   <ul class="messages">
+													  {% for message in messages %}
+													  <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+														 {% endfor %}
+												   </ul>
+												   {% endif %}
+							  
+							  
+												</div>
+								 
+											 </div>
 
-
-							
+                                        </form>
+										
+							</div>
 					   </div>
-					
+							
+                            
 				  </div>
+
+
 			<!--//content-inner-section-->
+
+<!--//Sección de la tabla de suscripciones-->
 		
+	
+	
+	
+<!--//Sección de la tabla de suscripciones-->
 
-			
 
 
 
+
+
+		</div>
 	</div>
  <!-- Footer -->
 	

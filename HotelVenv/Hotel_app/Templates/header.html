@@ -23,7 +23,16 @@
                                    <li><a href="http://127.0.0.1:8000/hotel/about/">Sobre nosotros</a></li>
                                    <li><a href="http://127.0.0.1:8000/hotel/gallery/">Galeria</a></li>
                                    <li><a href="http://127.0.0.1:8000/hotel/products/" >Reservar</a></li>
+
+
+                                   {% if user.is_authenticated %}
+                                                    
+                                   {% else %}
                                     <li><a href="http://127.0.0.1:8000/hotel/register/">Registrate</a></li>
+                                   {% endif %}
+                                   
+
+
                                 </li>
 
                                
@@ -37,7 +46,13 @@
                                        <div class="cd-main-header">
                                            <ul class="cd-header-buttons">
                                                 <div class="w3ls-social-icons text-right">
-                                                    <a href="{%url 'cerrarsesion'%}">Iniciar<i class="fa fa-sign-in"></i></a>
+                                                    {% if user.is_authenticated %}
+                                                    
+                                                    {% else %}
+                                                        <a href="{%url 'cerrarsesion'%}">Iniciar<i class="fa fa-sign-in"></i></a>
+                                                    {% endif %}
+
+                                                    
                                                    
                                                 
                                                 </div>

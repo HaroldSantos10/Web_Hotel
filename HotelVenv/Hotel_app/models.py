@@ -107,7 +107,7 @@ class tblreservacion(models.Model):#######RESERVACION
 
 class tblcliente(models.Model):#######CLIENTE
 
-    habitacion_id = models.ForeignKey(tblhabitacion, on_delete = models.CASCADE)
+    habitacion = models.CharField(max_length=200, null= True)
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
     edad = models.IntegerField(default='0')

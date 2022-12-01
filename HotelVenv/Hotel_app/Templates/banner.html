@@ -12,8 +12,14 @@
     </div>
     <div class="agileits-contact-info text-right">
         <ul>
-            <li><i class="fa fa-user" aria-hidden="true"></i><a href="/hotel/perfil/"> {{request.user}} </a></li>
-            <li><i class="fa fa-times-circle" aria-hidden="true"></i><a href="{%url 'cerrarsesion'%}"> Cerrar Sesión </a></li>
+            
+            {% if user.is_authenticated %}
+            <li><i class="fa fa-user" aria-hidden="true"></i><a href="/hotel/perfil/"> {{request.user}} </a></li> 
+            <li><i class="fa fa-times-circle" aria-hidden="true"></i><a href="{%url 'cerrarsesion'%}"> Cerrar Sesión </a></li>  
+            {% endif %}
+
+            
+            
 
         </ul>
     </div>

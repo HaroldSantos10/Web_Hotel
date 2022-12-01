@@ -23,6 +23,14 @@ urlpatterns = [
     path('mostrarclientes/', adminclientes),
     path('addcliente/', addcliente),
     path('addreservacion/', addreservacion),
+    path('mostrarreservaciones/', adminreservaciones),
+    path('editreservacion/<id>', editreservacion),
+    path('guardarreservacion/<id>', guardarreservacion),
+    path('delreservacion/<id>', delreservacion),
+    path('mostrarusers/', mostrarusers),
+    path('deluser/<id>', deluser),
+
+
     
 ]
 

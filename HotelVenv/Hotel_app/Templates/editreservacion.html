@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			{%include 'banner.html'%}
 		</div>
   <!--/banner-section-->
-	<div id="demo-1" class="banner-inner"> 
+	<div id="demo-1" class="banner-inner">
 		
         <!--/HEADER-->
         {%include 'header.html'%}
@@ -48,59 +48,89 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul>
 				<li><a href="http://127.0.0.1:8000/hotel/index/">Home</a> <i>/</i></li>
 				
-				<li>{{request.user}}</li>
+				<li>Tabla de Reservaciones </li>
 			</ul>
 		</div>
 	</div>
 <!-- //breadcrumb -->
-			<!--/content-inner-section-->
-				  <div class="w3_content_agilleinfo_inner">
-					    <div class="container">
-							<div class="inner-agile-w3l-part-head">
-					           <h2 class="w3l-inner-h-title">Perfil</h2>
-							   <div class="w3_agileits_testimonial_grid">
-								<i class="fa fa-quote-right" aria-hidden="true"></i>
-									
-									<img src="{%static 'lib/web/images/perfil.WEBP'%}" width="200" height="200" alt=" " class="img-responsive" />
-									
-
-									<h3 class="fst-normal">Usuario: {{request.user}}</h3>
-
-									
-								</div>
-
-								
-								<div class="inner-agile-w3l-part-head">
-									
-									{% if user.is_superuser %}
-										{%include 'formBotones.html'%}
-
-									{% endif %}
-						
-
-
-
-
-									
-								
-								</div>
-
-
-							</div>
-
-
-
-							
-					   </div>
-					
-				  </div>
-			<!--//content-inner-section-->
 		
 
+
+
+<!--/content-inner-section-->
+		
+<div class="w3_content_agilleinfo_inner">
+		<div class="container">
+
+			<h2 class="w3l-inner-h-title">Espacio para agregar Reservaciones</h2>
+					
+			<div class="col-md-6 w3l_about_bottom_right two">
+				<h3 class="tittle why">Reservar</h3>
+				<div class="book-form">
 			
+				   <form action="/hotel/guardarreservacion/{{reservacion.id}}" method="post">  {% csrf_token %}
+						<div class="col-md-6 form-date-w3-agileits">
+							<label><i class="fa fa-user" aria-hidden="true"></i> Nombre :</label>
+							<input type="text" name="inputnombre" id="inputnombre" placeholder="Tu nombre" required="">
+						</div>
+						<div class="col-md-6 form-date-w3-agileits">
+						  <label><i class="fa fa-user" aria-hidden="true"></i> Apellido :</label>
+						  <input  type="text" name="inputapellido" id="inputapellido" placeholder="Tu Apellido" required="">
+					  </div>
+						 <div class="col-md-6 form-date-w3-agileits">
+										<label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de llegada :</label>
+										<input  id="inputfechaLl" name="inputfechaLl" type="date" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+									
+									</div>
+			
+						<div class="col-md-6 form-date-w3-agileits">
+									<label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de salida :</label>
+										<input  id="inputfechaS" name="inputfechaS" type="date" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+										
+									</div>
+			
+			
+			
+						<div class="col-md-6 form-left-agileits-w3layouts bottom-w3ls">
+								<label><i class="fa fa-home" aria-hidden="true"></i> Elige una habitación :</label>
+								<select id="inputhabitacion" name = "inputhabitacion" class="form-control">
+									<option selected>Elige una habitación </option>
+									<option value = 'Deluxe Double Room'>Deluxe Double Room</option>
+									<option value = 'Deluxe Single Room'>Deluxe Single Room</option>
+									<option value = 'Habitación Doble'>Habitación Doble</option>
+									<option value = 'Habitación Individual'>Habitación Individual</option>
+									<option value = 'Habitación triple'>Habitación triple</option>
+									<option value = 'Habitación Familiar'>Habitación Familiar</option>
+								</select>
+						</div>
+						<div class="col-md-6 form-date-w3-agileits second-agile">
+						  <label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
+						  <input type="email" name="inputemail" id="inputemail" placeholder="Tu email" required="">
+					  </div>
+						<div class="clearfix"> </div>
+						<div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
+							  <input type="submit" value="Hacer una reservación">
+			
+							  
+						</div>
+				</form>
+			
+			
+				</div>
+			
+			</div>
+
+		</div>
+	</div>
+	
+
+		
 
 
 
+			<!--//content-inner-section-->
+
+		</div>
 	</div>
  <!-- Footer -->
 	
@@ -180,7 +210,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</script>
 <!--end-smooth-scrolling-->
 <!--js for bootstrap working-->
-	<script src="{%static 'lib/web/js/bootstrap.js'%}"></script>
+   
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+
+
+    <!--script src="{%static 'lib/web/js/bootstrap.js'%}"></script-->
 <!-- //for bootstrap working -->
 </body>
 </html>

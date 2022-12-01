@@ -106,6 +106,27 @@ def addcliente(request):
     return redirect('/hotel/mostrarclientes')
 
 
+#editar una cliente
+
+def editcliente(request,id):
+    cliente=tblcliente.objects.get(id=id)
+    return render(request,'editcliente.html', {"cliente":cliente})
+
+def guardarcliente(request,id): 
+     nombre=request.POST['inputnombre']
+     apellido=request.POST['inputapellido']
+     identificacion = request.POST['inputid']
+     email=request.POST['inputemail']
+
+     id=tblsuscripciones.objects.get(id=id)
+     id.nombre=nombre
+     id.apellido=apellido
+     id.email=email
+     id.save()
+     return redirect('/hotel/suscripcion')     
+
+
+
 ###AGREGAR UNA RESERVACIÓN 
 def addreservacion(request):
 
@@ -131,6 +152,51 @@ def addreservacion(request):
 
 
 #MOSTRAR RESERVACIONES
+#####métodos para los CRUD
+
+#mostrar las reservacioness
+
+def adminreservaciones(request):
+    listares = tblreservacion.objects.all()
+    return render(request,'mostrarreservaciones.html', {"reservacion":listares})
+
+
+
+
+#editar una reservacion
+
+def editreservacion(request,id):
+    reservacion=tblreservacion.objects.get(id=id)
+    return render(request,'editreservacion.html', {"reservacion":reservacion})
+
+def guardarreservacion(request,id): 
+    nombre = request.POST['inputnombre']
+    apellido = request.POST['inputapellido']
+
+    fecha_llegada = request.POST['inputfechaLl']
+    fecha_salida = request.POST['inputfechaS']
+    email = request.POST['inputemail']
+
+    habitacion = request.POST['inputhabitacion']
+
+    id = tblreservacion.objects.get(id=id)
+    id.nombre=nombre
+    id.apellido=apellido
+    id.fecha_llegada = fecha_llegada
+    id.fecha_salida = fecha_salida
+    id.email=email
+    id.habitacion = habitacion
+    id.save()
+    return redirect('/hotel/mostrarreservaciones')     
+
+
+
+
+#eliminar una suscripcion
+def delreservacion(request, id):
+    reservacion = tblreservacion.objects.get(id=id)
+    reservacion.delete()
+    return redirect('/hotel/mostrarreservaciones/')
 
 
 
@@ -194,6 +260,9 @@ class Registro(UserCreationForm):
         model = User
         fields = ['username','password1','password2','email','first_name','last_name']
 
+        
+
+
 
 #Login de usuarios dentro de la web
 
@@ -209,6 +278,33 @@ def register(request):
 
     return render(request, 'register.html', {"form":form})
 
+def mostrarusers(request):
+    listausers = User.objects.all()
+    form = Registro()
+
+    if request.method == 'POST':
+        form = Registro(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Usuario creado con éxito')
+    
+    
+
+    return render(request, 'mostrarusers.html', {"form2":form,"user":listausers})
+
+
+
+
+
+
+#MOSTRAR USERS 
+
+
+#eliminar USER
+def deluser(request, id):
+    user = User.objects.get(id=id)
+    user.delete()
+    return redirect('/hotel/mostrarusers')
 
 
 ##### CONTROL DE ERRORES 
