@@ -29,9 +29,9 @@ SECRET_KEY = 'django-insecure-p_=($p3eblzn(*-c0d!2)-4&=84x09syxh26e-lu9u=e7z^fhq
 #Para poder insertar un pequeño control de errores
 
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
